@@ -97,26 +97,20 @@
     var toonimals = [ {name: "Itchy", animal: "mouse"}, {name: "Stimpy", animal: "cat"}, {name: "Daffy", animal: "duck"}, {name: "Scratchy", animal: "cat"}, {name: "Ren", animal: "dog"}, {name: "Felix", animal: "cat"}]
 
 // 6a. Write a function that takes in the toonimals array as an argument and returns an array with only the toon objects that are cats. Expected output: [ { name: "Stimpy", animal: "cat" }, { name: "Scratchy", animal: "cat" }, { name: "Felix", animal: "cat" } ]
-    // function getCats(kitty) {
-    //     let newKitty = []
-    //     for (let i = 0; i < kitty.length ; ++i){
-    //         if(kitty.animal === "cat"){
-    //             newKitty.push(kitty[i]);
-    //         }
-    //     }
-    //       return newKitty 
-    // }
-    // console.log(getCats(toonimals))
+
     function getCats(name1){
-        let newCats = [];
-        for(let i = 0; i < name1.length; i++){
-            if(name1[i] === "cat"){
-                newCats.push(name1[i]);
-            }    
-        }
+        let newCats = toonimals.filter(value => value.animal === 'cat')
         return newCats
     }
     console.log(getCats(toonimals))
+
 //6b. Write a function that returns only the names of all the non-cats. Expected output: "Itchy" "Daffy" "Ren"
 
+function noCats(name2){
+        let notCats = toonimals.filter(value => value.animal !== 'cat')
+        return notCats
+        return notCats.name
+    }
+    console.log(noCats(toonimals))
+    // I cannot get the retuen of just the name
 //6c. Stretch: Create a function that will print a sentence for every toon stating their name and their animal type. Use string interpolation. Expected output: "Itchy is a mouse" "Stimpy is a cat" "Daffy is a duck" "Scratchy is a cat" "Ren is a dog" "Felix is a cat"
